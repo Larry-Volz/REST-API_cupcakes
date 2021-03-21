@@ -8,15 +8,26 @@ def connect_db(app):
 
 #MODELS GO BELOW
 class Cupcake (db.Model):  #inherits from db
-   """ Cupcake info """
-   __tablename__ = "cupcakes"
-   def __repr__(self):
-       return f"id={self.id} flavor={self.flavor} size={self.size} rating={self.rating} "  #for better referencing
+    """ Cupcake info """
+    __tablename__ = "cupcakes"
+    
+    def __repr__(self):
+        return f"id={self.id} flavor={self.flavor} size={self.size} rating={self.rating} "  #for better referencing
 
-   id = db.Column(db.Integer, primary_key = True, autoincrement = True)
-   flavor = db.Column(db.Text, nullable = False, unique = False)
-   size = db.Column(db.Text, nullable = False, default = "medium")
-   rating = db.Column(db.Float, nullable = False)
-   image = db.Column(db.Text, nullable = False, default = "https://tinyurl.com/demo-cupcake")
+    id = db.Column(db.Integer, primary_key = True, autoincrement = True)
+    flavor = db.Column(db.Text, nullable = False, unique = False)
+    size = db.Column(db.Text, nullable = False, default = "medium")
+    rating = db.Column(db.Float, nullable = False)
+    image = db.Column(db.Text, nullable = False, default = "https://tinyurl.com/demo-cupcake")
+
+    def serialize(self):
+        """turn model into a dictionary/JSON format"""
+        return {
+        'id':self.id,
+        'flavor':self.flavor,
+        'rating':self.rating,
+        'size':self.size,
+        'image':self.image
+    }
 
 

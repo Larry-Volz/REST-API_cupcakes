@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="cupcake.css">
+    <title>Cupcakes</title>
+</head>
+<body>
+    <script src="http://unpkg.com/jquery"></script>
+
+    <div class="container">
+        <!-- <div class="row justify-content-center">
+            <div class="col">
+            </div>
+        </div> -->
+        <h1 class="display-1 text-center">Cupcake Collection</h1>
+        <p class="text-center">A Javascript/Python/PostGress Demo with front end browser communicating to back end Flask server using JSON to my own RESTful API</p>
+        <form action="POST" class="form-group">
+            <div class="input-group">
+                <p class=" form-text   mr-3"><strong>Add a new cupcake: </strong></p>
+                <label for="flavor" class=" form-text  ">Flavor</label>
+                <input type="text" name="flavor" id="flavor" placeholder="Flavor" class="form-control-sm m-1">
+                <label for="size" class=" form-text  ">Size</label>
+                <select name="size" id="size" placeholder="Size" class="form-control-sm m-1">
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                    <option value="massive">Massive (really a cake)</option>
+                </select>
+                <label for="rating" class=" form-text  ">Rating</label>
+                <select name="rating" id="rating" placeholder="Rating" class="form-control-sm m-1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                <label for="image" class=" form-text  ">Image URL</label>
+                <input type="text" name="image" id="image" placeholder="Image URL" class="form-control-sm m-1">
+                <input type="submit" class="btn btn-primary btn-sm m-2 align-items-center" value="Add cupcake">
+
+
+            </div>
+        </form>
+            <div class="cupcake-display"></div>
+    </div>
+    
+
+
+    <script src = "https://code.jquery.com/jquery-3.1.1.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+      <script src="http://unpkg.com/axios/dist/axios.js"></script>
+      <script src="static/cupcakes.js"></script>
+</body>
+</html>
