@@ -47,7 +47,15 @@ def create_cupcake():
                     "image": "http://test.com/cupcake2.jpg"
                 }
             """
-    data = request.json
+    #I had to add and remove and play with that extra ["cupcake"] - I ended up adding it on 
+    #client side and then removing it here on server side.  JSONstringify never worked for me
+    # and there is NO teacher version for this!  That REALLY would have been helpful since I had to do this
+    # on a weekend where the TA's are not available.  Grrrrrrrr...
+    # What I learned: TEST WITH INSOMNIA AND LOOK CLOSELY AT WHAT THE BACK-END IS GETTING TO MAKE SURE IT
+    # MATCHES!!!!
+    
+    data = request.json["cupcake"]
+    print(f"RECIEVED DATA: {data}")
 
     new_cupcake = Cupcake(
         flavor=data["flavor"],
